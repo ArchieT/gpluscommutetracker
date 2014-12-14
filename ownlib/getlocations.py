@@ -10,5 +10,8 @@ class getfromauth:
 			quit()
 		if authkeytype == "dummy":
 			print "This is a dummy authkeytype, fake data will appear."
+		if authkeytype == "plainpasswd":
+			password = authkey
 class getfrompub:
 	def __init__(self):
+		pass # prepare the connection
