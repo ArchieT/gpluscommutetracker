@@ -18,8 +18,12 @@ parmetry = vars(argh.parse_args())
 ourinstance = getlocations(True if parmetry['auth'] else False,parmetry['authkey'] if parmetry['authkey'] else "There is no key",parmetry['authtype'] if parmetry['authtype'] else "nothing")
 
 def checking(persons):
+	whatweregettin = {}
+	for whocreate in persons: whatweregettin[whocreate] = []
 	for who in persons:
-		for i in ourinstance.getsmbd(who,"dummy"): print i
+		for i in ourinstance.getsmbd(who,"dummy"):
+			print i
+
 
 if parmetry['singlecheck']:
 	checking(parmetry['person'])
