@@ -21,8 +21,10 @@ def checking(persons):
 	whatweregettin = {}
 	for whocreate in persons: whatweregettin[whocreate] = []
 	for who in persons:
-		for i in ourinstance.getsmbd(who,"dummy"):
+		thisisit = ourinstance.getsmbd(who,"dummy")
+		for i in thisisit:
 			print i
+			print thisisit[i]
 
 
 if parmetry['singlecheck']:
