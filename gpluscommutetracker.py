@@ -17,7 +17,7 @@ class MainPage(webapp2.RequestHandler):
 class Adding(webapp2.RequestHandler):
 	def adding(self):
 		self.response.write('<html><body>You entered:<pre>')
-		self.response.write(cgi.escape(self.request.get('profileID')))\
+		self.response.write(cgi.escape(self.request.get('profileID')))
 		self.response.write(cgi.escape(self.request.get('forever')))
 		self.response.write(" until ")
 		self.response.write(cgi.escape(self.request.get('until')))
