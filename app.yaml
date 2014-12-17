@@ -1,7 +1,7 @@
 application: gpluscommutetracker
-version: 0.1
+version: alpha1
 runtime: python27
-api_version: 0.1
+api_version: alpha1
 threadsafe: true
 
 handlers:
