@@ -17,13 +17,13 @@ class MainPage(webapp2.RequestHandler):
 class Adding(webapp2.RequestHandler):
 	def adding(self):
 		self.response.write('<html><body>You entered:<pre>')
-		self.response.write(
-			cgi.escape(self.request.get('profileID'))+\
-			" "+cgi.escape(self.request.get('forever'))+\
-			" until "+\
-			cgi.escape(self.request.get('until'))+\
-			" every "+cgi.escape(self.request.get('every'))+"minutes"
-		)
+		self.response.write(cgi.escape(self.request.get('profileID')))\
+		self.response.write(cgi.escape(self.request.get('forever')))
+		self.response.write(" until ")
+		self.response.write(cgi.escape(self.request.get('until')))
+		self.response.write(" every ")
+		self.response.write(cgi.escape(self.request.get('every')))
+		self.response.write(" minutes")
 		self.response.write('</pre></body></html>')
 
 application = webapp2.WSGIApplication([
