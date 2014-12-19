@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body bgcolor="#FFFFCC">
+		{% for instance in instances %}
+			owner: {{ instance.owner.nickname() }}<br>
+			profileID: {{ instance.profileID }}<br>
+			until: {{ instance.until }}<br>
+			every: {{ instance.every }}<br>
+			forever: {{ instance.forever }}<br>
+			creationdate: {{ instance.creationdate }}<br>
+		{% endfor %}
+		<form action="/adding?%s" method="post">
+			<div>Profile ID: <input name="profileid" type="text"></div>
+			<div> track <input type="checkbox" name="forever" value="forever"> forever / until <input name="until" type="datetime"></div>
+			<div> every <input type="number" name="every"> minutes</div>
+			<div><input type="submit" value="Start tracking"></div>
+	</form>
+	</body>
+</html>
+{% endautoescape %}
