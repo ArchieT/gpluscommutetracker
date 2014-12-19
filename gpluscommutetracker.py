@@ -8,7 +8,7 @@ import webapp2
 
 #MAIN_PAGE_HTML = file('main-html.html').read()
 MAIN_PAGE_FOOTER = """\
-	<form action="/adding" method="post">
+	<form action="/adding?%s" method="post">
 		<div>Profile ID: <input name="profileid" type="text"></div>
 		<div> track <input type="checkbox" name="forever" value="forever"> forever / until <input name="until" type="datetime"></div>
 		<div> every <input type="number" name="every"> minutes</div>
